@@ -7,7 +7,7 @@
 html {
     background-color: white;
     color: grey;
-    font-size: 10px;
+    font-size: 1vh;
     font-family: 'Sofia', 'Arial', cursive;
     text-rendering: optimizeLegibility;
 }
@@ -16,7 +16,8 @@ body {
     background-image: url('loginpage.jpg');
     background-size: cover;
     background-position: center;
-    position: relative;
+    position: absolute;
+    width: 100%;
     height: 100vh;
 }
 
@@ -29,42 +30,105 @@ body {
     text-align: center;
 }
 
+.logo-image {
+    width: 15vh;
+}
+
 .logo-name {
-    font-size: 60px;
+    font-size: 6vh;
     color: #65381a;
 }
 
-.card {
-    width: 500px;
-    height: 500px;
-    background-color: white;
-    border-radius: 5px;
-    opacity: 0.8;
-    padding: 30px;
-    margin-top: 40px;
+.scene {
+    width: 50vh;
+    height: 50vh;
+    margin: 40px;
+    position: relative;
 }
 
-.card-title {
+#card {
+    width: 100%;
+    height: 100%;
+    transition: ease 1s;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+#card #figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 2vh;
+}
+
+#card .front {
+    background: white;
+    opacity: 0.8;
+}
+
+#card .back {
+    background: white;
+    opacity: 0.8;
+    transform: rotateY( 180deg);
+}
+
+#card.flipped {
+    transform: rotateY( 180deg);
+}
+
+#card-title {
     text-align: center;
-    font-size: 15px;
+    font-size: 1.5vh;
     color: #b98a44;
+    margin-top: 1vh;
+}
+
+#recover-header {
+    overflow: auto;
+    text-align: center;
+    font-size: 1.5vh;
+    color: #b98a44;
+}
+
+#recover-header .left {
+    float: left;
+    width: 20%;
+    text-align: left;
+    padding-left: 1vh;
+    padding-top: 1vh;
+}
+
+#recover-header .center {
+    float: left;
+    text-align: center;
+    width: 60%;
+    padding-top: 1vh;
+}
+
+#recover-header .right {
+    float: left;
+    text-align: center;
+    width: 20%;
 }
 
 .inputs {
     text-align: left;
-    padding: 30px;
+    padding: 3vh;
 }
 
 .inputs #email, #password {
-    margin-top: 15px;
+    margin-top: 1.5vh;
 }
 
 .inputs input {
     color: #b98a44;
     width: 100%;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5px;
+    font-size: 2vh;
+    padding: 1vh;
+    border-radius: 0.5vh;
 }
 
 .inputs input:focus {
@@ -76,21 +140,22 @@ body {
 }
 
 a {
-    font-size: 20px;
+    font-size: 2vh;
     color: #b98a44;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.enter-button {
+button {
     text-align: center;
 }
 
-.enter-button button {
-    padding: 30px;
-    width: 250px;
+button {
+    padding: 3vh;
+    width: 25vh;
     background-color: #b98a44;
     border: none;
-    border-radius: 10px;
+    border-radius: 1vh;
     color: white;
 }
 
@@ -104,6 +169,21 @@ button:focus {
 
 button:active {
     position: relative;
-    top: 5px;
+    top: 0.5vh;
     box-shadow: none;
+}
+
+#back-page {
+    font-size: 4vh;
+}
+
+div.row {
+    clear:both;
+}
+
+.recover-text {
+    justify-content: center;
+    margin-left: 2.6vh;
+    margin-right: 2.6vh;
+    margin-top: 4vh;
 }

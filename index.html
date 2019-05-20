@@ -4,36 +4,67 @@
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     </head>
     <body>
         <div class="content">
             <div>
-                <img src="coffelogo.png" alt="logo" width="150">
+                <img class="logo-image" src="coffelogo.png" alt="logo">
                 <h1 class="logo-name">Carecoffe</h1>
             </div>
-            <div class="card">
-                <div class="card-title">
-                    <h1>Log In</h1>
-                </div>
-                <div class="inputs">
-                    <div id="email">
-                        <h1>E-mail</h1>
-                        <input type="email" name="emailaddress">
+            <div class="scene">
+                <div id="card">
+                    <div id="figure" class="front">
+                        <div id="card-title">
+                            <h1>Log In</h1>
+                        </div>
+                        <div class="inputs">
+                            <div id="email">
+                                <h1>E-mail</h1>
+                                <input type="email" name="emailaddress">
+                            </div>
+                            <div id="password">
+                                <h1>Password</h1>
+                                <input type="password" name="password">
+                            </div>
+                            <div class="forgot-password">
+                                <a id="flip">Forgot my password</a>
+                            </div>
+                        </div>
+                        <div>
+                            <button>
+                                <h1>Enter</h1>
+                            </button>
+                        </div>
                     </div>
-                    <div id="password">
-                        <h1>Password</h1>
-                        <input type="password" name="password">
+                    <div id="figure" class="back">
+                        <div id="recover-header" class="row">
+                            <div class="left">
+                                <i id="back-page" class="fas fa-arrow-left"></i>
+                            </div>
+                            <div class="center">
+                                <h1>Recover password</h1>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <div class="recover-text">
+                            <h1>Enter your email. We'll send an email to you with the new password, then you can change it after log in.</h2>
+                        </div>
+                        <div class="inputs">
+                            <div id="recover-email">
+                                <h1>E-mail</h1>
+                                <input type="email" name="emailaddress">
+                            </div>
+                        </div>
+                        <div class="recover-button">
+                            <button id="recoverpassword">
+                                <h1>Recover</h1>
+                            </button>
+                        </div>
                     </div>
-                    <div class="forgot-password">
-                        <a href="">Forgot my password</a>
-                    </div>
-                </div>
-                <div class="enter-button">
-                    <button>
-                        <h1>Enter</h1>
-                    </button>
                 </div>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
